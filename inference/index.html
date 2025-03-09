@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scenery Image Classifier</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.15.0"></script>
+    <script src="model-loader.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scenery Image Classifier</h1>
+        <p>Upload an image to classify: buildings, forest, glacier, mountain, sea, or street</p>
+        
+        <input type="file" id="file-upload" accept="image/*">
+        <button id="upload-button" onclick="document.getElementById('file-upload').click()">Choose Image</button>
+        
+        <div id="image-container"></div>
+        <div id="loading">Loading model and processing image...</div>
+        
+        <div id="result-container">
+            <canvas id="canvas"></canvas>
+            <h3>Predictions:</h3>
+            <div id="predictions"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

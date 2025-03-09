@@ -1,3 +1,4 @@
 /seg_pred*
 /seg_test*
 /seg_train*
+/best_model.h5
